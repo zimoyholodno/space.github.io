@@ -1,0 +1,192 @@
+@font-face {
+    font-family: 'PF Agora Sans Pro';
+    src: url('PFAgoraSansPro-Black.eot');
+    src: local('PFAgoraSansPro-Black'),
+        url('PFAgoraSansPro-Black.eot?#iefix') format('embedded-opentype'),
+        url('PFAgoraSansPro-Black.woff2') format('woff2'),
+        url('PFAgoraSansPro-Black.woff') format('woff'),
+        url('PFAgoraSansPro-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PF Agora Sans Pro';
+    src: url('PFAgoraSansPro-LightItalic.eot');
+    src: local('PFAgoraSansPro-LightItalic'),
+        url('PFAgoraSansPro-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('PFAgoraSansPro-LightItalic.woff2') format('woff2'),
+        url('PFAgoraSansPro-LightItalic.woff') format('woff'),
+        url('PFAgoraSansPro-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PF Agora Sans Pro';
+    src: url('PFAgoraSansPro-Bold.eot');
+    src: local('PFAgoraSansPro-Bold'),
+        url('PFAgoraSansPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('PFAgoraSansPro-Bold.woff2') format('woff2'),
+        url('PFAgoraSansPro-Bold.woff') format('woff'),
+        url('PFAgoraSansPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PF Agora Sans Pro';
+    src: url('PFAgoraSansPro-Light.eot');
+    src: local('PFAgoraSansPro-Light'),
+        url('PFAgoraSansPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('PFAgoraSansPro-Light.woff2') format('woff2'),
+        url('PFAgoraSansPro-Light.woff') format('woff'),
+        url('PFAgoraSansPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PF Agora Sans Pro';
+    src: url('PFAgoraSansPro-Thin.eot');
+    src: local('PFAgoraSansPro-Thin'),
+        url('PFAgoraSansPro-Thin.eot?#iefix') format('embedded-opentype'),
+        url('PFAgoraSansPro-Thin.woff2') format('woff2'),
+        url('PFAgoraSansPro-Thin.woff') format('woff'),
+        url('PFAgoraSansPro-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PF Agora Sans Pro';
+    src: url('PFAgoraSansPro-ThinItalic.eot');
+    src: local('PFAgoraSansPro-ThinItalic'),
+        url('PFAgoraSansPro-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('PFAgoraSansPro-ThinItalic.woff2') format('woff2'),
+        url('PFAgoraSansPro-ThinItalic.woff') format('woff'),
+        url('PFAgoraSansPro-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PF Agora Sans Pro';
+    src: url('PFAgoraSansPro-BlackItalic.eot');
+    src: local('PFAgoraSansPro-BlackItalic'),
+        url('PFAgoraSansPro-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('PFAgoraSansPro-BlackItalic.woff2') format('woff2'),
+        url('PFAgoraSansPro-BlackItalic.woff') format('woff'),
+        url('PFAgoraSansPro-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PF Agora Sans Pro UltraBlack';
+    src: url('PFAgoraSansPro-UltraBlack.eot');
+    src: local('PFAgoraSansPro-UltraBlack'),
+        url('PFAgoraSansPro-UltraBlack.eot?#iefix') format('embedded-opentype'),
+        url('PFAgoraSansPro-UltraBlack.woff2') format('woff2'),
+        url('PFAgoraSansPro-UltraBlack.woff') format('woff'),
+        url('PFAgoraSansPro-UltraBlack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PF Agora Sans Pro';
+    src: url('PFAgoraSansPro-Medium.eot');
+    src: local('PFAgoraSansPro-Medium'),
+        url('PFAgoraSansPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('PFAgoraSansPro-Medium.woff2') format('woff2'),
+        url('PFAgoraSansPro-Medium.woff') format('woff'),
+        url('PFAgoraSansPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PF Agora Sans Pro XThin';
+    src: url('PFAgoraSansPro-XThinItalic.eot');
+    src: local('PFAgoraSansPro-XThinItalic'),
+        url('PFAgoraSansPro-XThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('PFAgoraSansPro-XThinItalic.woff2') format('woff2'),
+        url('PFAgoraSansPro-XThinItalic.woff') format('woff'),
+        url('PFAgoraSansPro-XThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PF Agora Sans Pro';
+    src: url('PFAgoraSansPro-Italic.eot');
+    src: local('PFAgoraSansPro-Italic'),
+        url('PFAgoraSansPro-Italic.eot?#iefix') format('embedded-opentype'),
+        url('PFAgoraSansPro-Italic.woff2') format('woff2'),
+        url('PFAgoraSansPro-Italic.woff') format('woff'),
+        url('PFAgoraSansPro-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PF Agora Sans Pro';
+    src: url('PFAgoraSansPro-MediumItalic.eot');
+    src: local('PFAgoraSansPro-MediumItalic'),
+        url('PFAgoraSansPro-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('PFAgoraSansPro-MediumItalic.woff2') format('woff2'),
+        url('PFAgoraSansPro-MediumItalic.woff') format('woff'),
+        url('PFAgoraSansPro-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PF Agora Sans Pro XThin';
+    src: url('PFAgoraSansPro-XThin.eot');
+    src: local('PFAgoraSansPro-XThin'),
+        url('PFAgoraSansPro-XThin.eot?#iefix') format('embedded-opentype'),
+        url('PFAgoraSansPro-XThin.woff2') format('woff2'),
+        url('PFAgoraSansPro-XThin.woff') format('woff'),
+        url('PFAgoraSansPro-XThin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PF Agora Sans Pro';
+    src: url('PFAgoraSansPro-Regular.eot');
+    src: local('PFAgoraSansPro-Regular'),
+        url('PFAgoraSansPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('PFAgoraSansPro-Regular.woff2') format('woff2'),
+        url('PFAgoraSansPro-Regular.woff') format('woff'),
+        url('PFAgoraSansPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PF Agora Sans Pro UltraBlack';
+    src: url('PFAgoraSansPro-UltraBlackItalic.eot');
+    src: local('PFAgoraSansPro-UltraBlackItalic'),
+        url('PFAgoraSansPro-UltraBlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('PFAgoraSansPro-UltraBlackItalic.woff2') format('woff2'),
+        url('PFAgoraSansPro-UltraBlackItalic.woff') format('woff'),
+        url('PFAgoraSansPro-UltraBlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PF Agora Sans Pro';
+    src: url('PFAgoraSansPro-BoldItalic.eot');
+    src: local('PFAgoraSansPro-BoldItalic'),
+        url('PFAgoraSansPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('PFAgoraSansPro-BoldItalic.woff2') format('woff2'),
+        url('PFAgoraSansPro-BoldItalic.woff') format('woff'),
+        url('PFAgoraSansPro-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
