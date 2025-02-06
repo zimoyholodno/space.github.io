@@ -1,0 +1,185 @@
+---
+const links: { img: string; title: string; text: string }[] = [
+    {
+        img: "/public/img/header-data.png",
+        title: "Обработка данных",
+        text: "Мы помогаем клиентам подобрать необходимые источники данных (через Pop UP нужно показать логотипы: Все ОФД, Nielsen, Едадил, СкидкиОнлайн). Валидируем и верифицируем их. Приводим их к единому формату и классификатору.",
+    },
+    {
+        img: "/public/img/header_analis.png",
+        title: "Анализ",
+        text: "Мы проводим анализ данных для выявления ключевых трендов, которые помогут клиентам принимать обоснованные решения. Используя современные аналитические инструменты, мы рассматриваем данные с разных ракурсов.",
+    },
+    {
+        img: "/public/img/header-visual.png",
+        title: "Визуализация",
+        text: "Для удобства восприятия мы создаем наглядные визуализации: графики и дашборды, которые помогают легко интерпретировать данные и находить нужную информацию.",
+    },
+    {
+        img: "/public/img/headet_inter.png",
+        title: "Интерпретация",
+        text: "На основе анализа и визуализации мы предоставляем интерпретацию результатов. Наша команда объясняет значение данных и предлагает стратегии для оптимизации процессов и повышения эффективности бизнеса.",
+    },
+];
+---
+
+<div class="headerComponent">
+    {
+        links.map(({ img, title, text }) => (
+            <div class="headerComponent__items">
+                <img class="headerComponent__img" src={img} alt="значок" />
+                <div class="headerComponent__title">{title}</div>
+                <div class="headerComponent__text">{text}</div>
+            </div>
+        ))
+    }
+</div>
+
+<style is:global lang="scss">
+    .headerComponent {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        color: #fff;
+        height: 350px;
+
+        &__items {
+            background-color: rgba(100, 100, 100, 0.33);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 20px;
+            width: 180px;
+            height: 187px;
+            padding: 25px;
+            transition:
+                width 2s,
+                height 2s;
+        }
+
+        &__img {
+            width: 73px;
+            height: 73px;
+
+            transition:
+                width 2s,
+                height 2s;
+        }
+
+        &__title {
+            font-size: 18px;
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+
+            transition: text-align 4s;
+        }
+
+        &__text {
+            visibility: hidden;
+            opacity: 0%;
+        }
+
+        &__items:hover {
+            padding-left: 25px;
+            width: 550px;
+            height: 325px;
+            background-image: url("/public/img/header_back_el.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            color: white;
+            align-items: stretch;
+        }
+
+        &__items:hover &__img {
+            width: 93px;
+            height: 93px;
+            // margin-top: 25px;
+            // margin-left: 25px;
+        }
+
+        &__items:hover &__title {
+            font-size: 20px;
+            margin-top: 25px;
+            font-weight: bold;
+            // margin-left: 25px;
+            text-align: left;
+        }
+
+        &__items:hover &__text {
+            color: white;
+            visibility: visible;
+            font-size: 16px;
+            line-height: 24px;
+            margin-top: 15px;
+            margin-bottom: 54px;
+            opacity: 100%;
+            // margin-right: 25px;
+            transition: opacity 6s;
+        }
+    }
+
+    @include desktop {
+        .headerComponent {
+            &__items:hover {
+                padding-left: 25px;
+                width: 400px;
+                height: 350px;
+            }
+        }
+    }
+
+    @include laptop {
+        .headerComponent {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            min-height: 1000px;
+            align-items: center;
+
+            &__items:hover {
+                align-items: center;
+            }
+        }
+    }
+
+    @include tablet {
+        .headerComponent {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            min-height: 1000px;
+            align-items: center;
+
+            &__items:hover {
+                align-items: center;
+            }
+        }
+    }
+
+    @include phone {
+        .headerComponent {
+            &__items:hover {
+                width: 260px;
+                height: 455px;
+            }
+
+            // &__items {
+            //     width: 100px;
+            //     height: 107px;
+            //     padding: 15px;
+            // }
+
+            // &__img {
+            //     width: 53px;
+            //     height: 75px;
+            // }
+
+            // &__title {
+            //     margin-top: 10px;
+            //     font-size: 10px;
+            // }
+        }
+    }
+</style>

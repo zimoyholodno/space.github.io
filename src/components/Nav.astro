@@ -1,0 +1,92 @@
+---
+import Button from "./Button.astro";
+---
+
+<div class="nav">
+    <input type="checkbox" id="toggle" />
+    <div class="nav__menu">
+        <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/">Продукты</a></li>
+            <li><a href="/">Кейсы</a></li>
+            <li><a href="/">Экспертное мнение</a></li>
+            <li><a href="/">Контакты</a></li>
+        </ul>
+        <Button class="button--320" size="normal">Запросить презентацию</Button>
+    </div>
+    <label for="toggle">
+        <div class="nav__lines">
+            <div class="nav__line"></div>
+            <div class="nav__line"></div>
+            <div class="nav__line"></div>
+        </div>
+    </label>
+</div>
+
+<style is:global lang="scss">
+    .nav {
+        position: relative;
+
+        ul {
+            padding-left: 10px;
+            list-style-type: none;
+        }
+
+        #toggle {
+            display: none;
+        }
+
+        label {
+            text-align: center;
+            display: block;
+            padding: 10px 20px;
+            position: absolute;
+            left: 30%;
+            top: 10px;
+            cursor: pointer;
+            transition: all 410ms;
+        }
+
+        &__lines {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        &__line {
+            border-radius: 30%;
+            height: 10px;
+            width: 60px;
+            background-color: #fff;
+        }
+
+        #toggle:checked ~ &__menu {
+            transform: translateX(2000px);
+        }
+
+        &__menu {
+            position: absolute;
+            width: 300px;
+            top: 10px;
+            left: -2000px;
+            height: 1000px;
+            padding: 20px;
+            transition: all 410ms ease-in;
+            box-sizing: border-box;
+            background-color: #fff;
+        }
+
+        &__menu li a {
+            text-decoration: none;
+        }
+    }
+
+    @media phone {
+        .nav {
+            &__line {
+                height: 6px;
+                width: 30px;
+            }
+        }
+    }
+</style>

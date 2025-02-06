@@ -1,0 +1,83 @@
+---
+const links: { href: string; text: string }[] = [
+  { href: "", text: "Главная" },
+  { href: "", text: "Продукты" },
+  { href: "", text: "Кейсы" },
+  { href: "", text: "Экспертное мнение" },
+  { href: "", text: "Контакты" },
+];
+---
+
+<div class="headerText">
+  {
+    links.map(({ href, text }) => (
+      <a {href} class="headerText__item link">
+        <span class:list={["headerText__icon"]} />
+        {text}
+      </a>
+    ))
+  }
+</div>
+
+<style is:global lang="scss">
+  .headerText {
+    display: flex;
+    gap: 20px;
+    color: white;
+    width: 100%;
+    font-family: "PF Agora Sans Pro";
+
+    &__item {
+      font-size: 18px;
+      line-height: 24px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      font-weight: 700;
+    }
+
+    &__icon {
+      // color: $color-blue;
+      font-size: 18px;
+    }
+  }
+
+  @include desktop {
+    .headerText {
+      width: auto;
+      &__item {
+        font-size: 18px;
+      }
+    }
+  }
+
+  @include laptop {
+    .headerText {
+      width: auto;
+      &__item {
+        font-size: 16px;
+      }
+    }
+  }
+
+  @include tablet {
+    .headerText {
+      &__item {
+        font-size: 14px;
+        gap: 0px;
+      }
+    }
+  }
+
+  @include phone {
+    .headerText {
+      width: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      &__icon {
+        font-size: 12px;
+      }
+    }
+  }
+</style>

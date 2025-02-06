@@ -1,0 +1,390 @@
+---
+const links: { title: string; id: string }[] = [
+    { title: "Налог на ввоз", id: "importTax" },
+    { title: "Расходы", id: "expenses" },
+    { title: "Прибыль", id: "profit" },
+    { title: "Закупка", id: "purchase" },
+    { title: "Надбавка №2", id: "extraCharge" },
+    { title: "Пошлина в такую-то структуру", id: "fee" },
+    { title: "Продажи", id: "sales" },
+];
+---
+
+<div class="mainBlackBlock">
+    {
+        links.map(({ title, id }) => (
+            <div class="mainBlackBlock__item" id={id}>
+                <div class="mainBlackBlock__circle">
+                    <div class="mainBlackBlock__circle--one" />
+                    <div class="mainBlackBlock__circle--two" />
+                </div>
+                <div class="mainBlackBlock__title">{title}</div>
+            </div>
+        ))
+    }
+</div>
+
+<style is:global lang="scss">
+    .mainBlackBlock {
+        height: 595px;
+        width: 100%;
+        max-width: 710px;
+        color: #fff;
+        text-align: center;
+        position: relative;
+
+        &__item {
+            gap: 15px;
+            // height: 24px;
+            // width: 200px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__circle {
+            display: grid;
+            place-items: center;
+
+            &--one {
+                width: 16px;
+                height: 16px;
+                border: 1px solid;
+                border-radius: 50%;
+                color: #e01e2e;
+                grid-area: 1 / 1;
+            }
+
+            &--two {
+                width: 12px;
+                height: 12px;
+                border: 1px solid;
+                border-radius: 50%;
+                color: #e01e2e;
+                background-color: #e01e2e;
+                grid-area: 1 / 1;
+            }
+        }
+
+        &__title {
+            background-color: #141515;
+            border-radius: 5px;
+            font-size: 12px;
+            height: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        // #importTax {
+        //     margin-left: 130.22px;
+        //     padding-top: 25px;
+        // }
+
+        #importTax {
+            margin-left: 190px;
+            padding-top: 25px;
+        }
+        #importTax &__title {
+            width: 120px;
+        }
+
+        // #expenses {
+        //     margin-left: 360px;
+        //     margin-top: 35px;
+        // }
+
+        #expenses {
+            margin-left: 350px;
+            margin-top: 55px;
+        }
+        #expenses &__title {
+            width: 104px;
+        }
+        #profit {
+            position: relative;
+            margin-left: 500px;
+            margin-top: 33px;
+            gap: 2px;
+        }
+
+        // #profit {
+        //     position: absolute;
+        //     margin-left: 540.74px;
+        //     margin-top: 33px;
+        // }
+
+        #profit &__title {
+            width: 83px;
+        }
+
+        // #purchase {
+        //     margin-left: 65px;
+        //     margin-top: 108px;
+        // }
+
+        #purchase {
+            margin-left: 85px;
+            margin-top: 10px;
+            gap: 5px;
+        }
+        #purchase &__title {
+            width: 86px;
+        }
+
+        // #extraCharge {
+        //     margin-left: 430px;
+        //     margin-top: 58px;
+        // }
+
+        #extraCharge {
+            margin-left: 380px;
+            margin-top: 25px;
+        }
+        #extraCharge &__title {
+            width: 106px;
+        }
+
+        // #fee {
+        //     position: absolute;
+        //     margin-left: 468.06px;
+        //     margin-top: 63px;
+        // }
+
+        #fee {
+            position: relative;
+            margin-top: 70px;
+            margin-left: 448px;
+            gap: 3px;
+        }
+
+        #fee &__title {
+            width: 143px;
+            height: 48px;
+        }
+
+        // #sales {
+        //     margin-left: 10px;
+        //     margin-top: 93px;
+        // }
+
+        #sales {
+            margin-left: 20px;
+        }
+
+        #sales &__title {
+            width: 88px;
+        }
+    }
+
+    @include desktop {
+        .mainBlackBlock {
+            width: 100%;
+            #importTax {
+                margin-left: 190px;
+                padding-top: 50px;
+            }
+            #expenses {
+                margin-left: 409px;
+                margin-top: 29px;
+            }
+
+            #fee {
+                position: relative;
+                margin-top: 30px;
+                margin-left: 508px;
+            }
+
+            #profit {
+                position: relative;
+                margin-left: 560px;
+            }
+
+            #purchase {
+                margin-left: 125px;
+                margin-top: 80px;
+            }
+
+            #extraCharge {
+                margin-left: 460px;
+                margin-top: 5px;
+            }
+
+            #sales {
+                margin-left: 80px;
+                margin-top: 0px;
+            }
+        }
+    }
+
+    @include laptop {
+        .mainBlackBlock {
+            #importTax {
+                margin-left: 220px;
+                padding-top: 60px;
+            }
+            #profit {
+                position: relative;
+                margin-left: 545px;
+            }
+            #purchase {
+                margin-left: 135px;
+                margin-top: 80px;
+            }
+
+            #fee {
+                position: relative;
+                margin-top: 20px;
+                margin-left: 500px;
+            }
+            #sales {
+                margin-left: 100px;
+                margin-top: 0px;
+            }
+        }
+    }
+
+    @include tablet {
+        .mainBlackBlock {
+            &__title {
+                font-size: 8px;
+            }
+            #importTax {
+                margin-left: 190px;
+                padding-top: 85px;
+            }
+
+            #importTax &__title {
+                width: 80px;
+            }
+
+            #expenses {
+                margin-left: 300px;
+                margin-top: 34px;
+            }
+            #expenses &__title {
+                width: 54px;
+            }
+
+            #profit {
+                position: absolute;
+                margin-left: 441px;
+                margin-top: 33px;
+            }
+
+            #profit &__title {
+                width: 53px;
+            }
+
+            #purchase {
+                margin-left: 118px;
+                margin-top: 58px;
+                gap: 5px;
+            }
+            #purchase &__title {
+                width: 46px;
+            }
+
+            #extraCharge {
+                margin-left: 349px;
+                margin-top: 28px;
+            }
+
+            #extraCharge &__title {
+                width: 66px;
+            }
+
+            #fee {
+                position: absolute;
+                margin-left: 392px;
+                margin-top: 23px;
+                gap: 5px;
+            }
+            #fee &__title {
+                width: 103px;
+                height: 48px;
+            }
+
+            #sales {
+                margin-left: 55px;
+                margin-top: 53px;
+            }
+            #sales &__title {
+                width: 48px;
+            }
+        }
+    }
+
+    @include phone {
+        .mainBlackBlock {
+            height: 300px;
+            &__circle {
+                &--one {
+                    width: 10px;
+                    height: 10px;
+                }
+
+                &--two {
+                    width: 5px;
+                    height: 5px;
+                }
+            }
+
+            #importTax {
+                margin-left: 100px;
+                padding-top: 18px;
+            }
+
+            #expenses {
+                margin-left: 176px;
+                margin-top: 9px;
+                gap: 5px;
+            }
+
+            #fee {
+                position: relative;
+                margin-top: 20px;
+                margin-left: 208px;
+            }
+
+            #profit {
+                gap: 2px;
+                position: relative;
+                margin-left: 244px;
+                margin-top: 5px;
+            }
+
+            #purchase {
+                margin-left: 41px;
+                margin-top: 8px;
+            }
+            #extraCharge {
+                margin-left: 160px;
+                margin-top: 5px;
+            }
+            #sales {
+                margin-left: 15px;
+                margin-top: -50px;
+                gap: 3px;
+            }
+
+            #importTax &__title {
+                height: 20px;
+            }
+            #expenses &__title {
+                height: 20px;
+            }
+            #profit &__title {
+                height: 20px;
+            }
+            #purchase &__title {
+                height: 20px;
+            }
+            #extraCharge &__title {
+                height: 20px;
+            }
+            #sales &__title {
+                height: 20px;
+            }
+        }
+    }
+</style>

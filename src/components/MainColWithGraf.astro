@@ -1,0 +1,68 @@
+---
+import Button from "./Button.astro";
+import MainGraf from "./MainGraf.astro";
+---
+
+<div class="mainColWithGraf">
+    <div class="mainColWithGraf__col">
+        <MainGraf />
+        <Button class="button--390" size="normal"
+            >Почему увеличивается?</Button
+        >
+    </div>
+</div>
+
+<style is:global lang="scss">
+    .mainColWithGraf {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 75px;
+        align-items: center;
+
+        &__col {
+            margin-left: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 75px;
+            align-items: center;
+        }
+    }
+
+    @include desktop {
+        .mainColWithGraf {
+            &__col {
+                margin-left: 0px;
+            }
+        }
+    }
+
+    @include laptop {
+        .mainColWithGraf {
+            &__col {
+                margin-left: 0px;
+            }
+        }
+    }
+
+    @include tablet {
+        .mainColWithGraf {
+            &__col {
+                margin-left: 0px;
+            }
+        }
+    }
+
+    @include phone {
+        .mainColWithGraf {
+            button {
+                width: 200px;
+            }
+            &__col {
+                gap: 45px;
+
+                margin-left: 0px;
+            }
+        }
+    }
+</style>

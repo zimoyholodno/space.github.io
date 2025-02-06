@@ -1,0 +1,61 @@
+---
+
+---
+
+<div class="endText">
+    <div class="endText__item">
+        <div class="endText__line"></div>
+        <div class="endText__title">
+            Собираем и обрабатываем гранулярные данные на уровне сети
+        </div>
+    </div>
+</div>
+
+<style is:global lang="scss">
+    .endText {
+        width: 612px;
+        height: 76px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 351px;
+        &__item {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &__line {
+            background-color: #e01e2e;
+            width: 75px;
+            height: 8px;
+        }
+
+        &__title {
+            font-size: 32px;
+            font-weight: bold;
+            font-family: "PF Agora Sans Pro";
+        }
+    }
+
+    @include tablet{
+        .endText {
+            width: 500px;
+        }
+    }
+
+    @include phone {
+        .endText {
+            width: 250px;
+
+            &__title {
+                font-size: 24px;
+            }
+
+            &__line {
+                width: 40px;
+                height: 5px;
+            }
+        }
+    }
+</style>

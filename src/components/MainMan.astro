@@ -1,0 +1,71 @@
+---
+
+---
+
+<div class="mainMan">
+    <div class="mainMan__shadow">
+        <img src="/public/img/main_elipse.png" alt="shadow" />
+    </div>
+    <div class="mainMan__man">
+        <img src="/public/img/main_man.png" alt="man" />
+    </div>
+</div>
+
+<style is:global lang="scss">
+    .mainMan {
+        display: grid;
+        margin-top: 65px;
+
+        &__man {
+            width: 443px;
+            height: 543px;
+            grid-area: 1 / 1;
+            margin-left: 50px;
+        }
+
+        &__shadow {
+            width: 379px;
+            height: 39px;
+            grid-area: 1 / 1;
+            padding-top: 490px;
+            margin-left: 140px;
+        }
+    }
+
+    @include tablet {
+        .mainMan {
+            &__shadow {
+                width: 350px;
+                height: 39px;
+                grid-area: 1 / 1;
+                padding-top: 370px;
+                margin-left: 50px;
+            }
+
+            &__man {
+                width: 350px;
+                height: 450px;
+                grid-area: 1 / 1;
+                margin-left: 20px;
+            }
+        }
+    }
+
+    @include phone {
+        .mainMan {
+            margin-top: 0px;
+            &__shadow {
+                width: 150px;
+                padding-top: 250px;
+                margin-left: 50px;
+            }
+
+            &__man {
+                width: 220px;
+                height: 300px;
+                padding-top: 40px;
+                margin-left: 30px;
+            }
+        }
+    }
+</style>

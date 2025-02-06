@@ -1,0 +1,275 @@
+---
+
+---
+
+<div class="endInfo">
+    <div class="endInfo__col" id="left">
+        <div class="endInfo__left">Ежемесячные</div>
+        <div class="endInfo__left">Сырые данные</div>
+        <div class="endInfo__left--short">Промо/ регулярные</div>
+        <div class="endInfo__left">Дистрибуция</div>
+    </div>
+    <div class="endInfo__col">
+        <img
+            src="/public/img/end_vec.svg"
+            alt="стрелка"
+            class="endInfo__arrow"
+        />
+        <img
+            src="/public/img/end_vec.svg"
+            alt="стрелка"
+            class="endInfo__arrow"
+        />
+        <img
+            src="/public/img/end_vec.svg"
+            alt="стрелка"
+            class="endInfo__arrow--short"
+        />
+        <img
+            src="/public/img/end_vec.svg"
+            alt="стрелка"
+            class="endInfo__arrow"
+        />
+    </div>
+    <div class="endInfo__col">
+        <div class="endInfo__right">Еженедельные</div>
+        <div class="endInfo__right">Промо/регулярные</div>
+        <div class="endInfo__right--short">Базовые/ Инкрементальные</div>
+        <div class="endInfo__right">Конкретное окружение</div>
+    </div>
+</div>
+
+<style is:global lang="scss">
+    .endInfo {
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+
+        &__col {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__left {
+            width: 207px;
+            margin-bottom: 42px;
+            font-size: 32px;
+            line-height: 32px;
+            font-weight: 400;
+            text-align: left;
+
+            &--short {
+                margin-bottom: 34px;
+                font-size: 32px;
+                line-height: 32px;
+                font-weight: 400;
+                text-align: left;
+                width: 207px;
+            }
+        }
+
+        &__right {
+            width: 275px;
+            margin-bottom: 42px;
+            font-size: 32px;
+            line-height: 32px;
+            font-weight: 400;
+            text-align: left;
+            margin-left: 29px;
+
+            &--short {
+                margin-left: 29px;
+                margin-bottom: 34px;
+                font-size: 32px;
+                line-height: 32px;
+                font-weight: 400;
+                text-align: left;
+                width: 275px;
+            }
+        }
+
+        &__arrow {
+            margin-bottom: 50px;
+            margin-right: 29px;
+            width: 43px;
+            height: 17px;
+            margin-top: 7px;
+            margin-left: 36px;
+
+            &--short {
+                margin-left: 36px;
+                margin-top: 7px;
+                margin-bottom: 74px;
+                margin-right: 29px;
+                width: 43px;
+                height: 17px;
+            }
+        }
+    }
+
+    @include desktop {
+        .endInfo {
+            &__right {
+                font-size: 28px;
+                margin-left: 0px;
+                width: 205px;
+
+                &--short {
+                    font-size: 28px;
+                    margin-left: 0px;
+                    width: 205px;
+                }
+            }
+
+            &__left {
+                font-size: 28px;
+                margin-left: 0px;
+                width: 180px;
+                &--short {
+                    font-size: 28px;
+                    margin-left: 0px;
+                }
+            }
+            #left {
+                width: 180px;
+            }
+
+            &__arrow {
+                margin-left: 0px;
+                margin-right: 10px;
+                &--short {
+                    margin-top: 40px;
+                    margin-right: 10px;
+                    margin-left: 0px;
+                }
+            }
+        }
+    }
+
+    @include laptop {
+        .endInfo {
+            &__left {
+                width: 207px;
+                margin-bottom: 42px;
+                font-size: 32px;
+
+                &--short {
+                    margin-bottom: 34px;
+                    font-size: 32px;
+                    width: 207px;
+                }
+            }
+
+            &__right {
+                width: 275px;
+                margin-bottom: 42px;
+                font-size: 32px;
+                margin-left: 29px;
+
+                &--short {
+                    margin-left: 29px;
+                    margin-bottom: 34px;
+                    font-size: 32px;
+                    width: 275px;
+                }
+            }
+
+            &__arrow {
+                margin-bottom: 49.68px;
+                margin-right: 29px;
+                width: 43px;
+                height: 17px;
+                margin-top: 7px;
+                margin-left: 76px;
+
+                &--short {
+                    margin-left: 76px;
+                    margin-top: 7px;
+                    margin-bottom: 73.68px;
+                    margin-right: 29px;
+                    width: 43px;
+                    height: 17px;
+                }
+            }
+        }
+    }
+
+    @include desktop {
+        .endInfo {
+            &__right {
+                font-size: 28px;
+                margin-left: 0px;
+                width: 205px;
+
+                &--short {
+                    font-size: 28px;
+                    margin-left: 0px;
+                    width: 205px;
+                }
+            }
+
+            &__left {
+                font-size: 28px;
+                margin-left: 0px;
+                width: 180px;
+                &--short {
+                    font-size: 28px;
+                    margin-left: 0px;
+                }
+            }
+            #left {
+                width: 180px;
+            }
+            &__arrow {
+                margin-left: 0px;
+                margin-right: 10px;
+                &--short {
+                    margin-top: 40px;
+                    margin-right: 10px;
+
+                    margin-left: 0px;
+                }
+            }
+        }
+    }
+    @include phone {
+        .endInfo {
+            &__right {
+                font-size: 14px;
+                margin-left: 0px;
+                width: 100px;
+
+                &--short {
+                    font-size: 14px;
+                    margin-left: 0px;
+                    width: 100px;
+                }
+            }
+
+            &__left {
+                font-size: 14px;
+                margin-left: 0px;
+                width: 70px;
+                &--short {
+                    width: 70px;
+                    font-size: 14px;
+                    margin-left: 0px;
+                }
+            }
+            #left {
+                width: 100px;
+            }
+            &__arrow {
+                margin-left: 0px;
+                margin-right: 40px;
+                width: 20px;
+                &--short {
+                    margin-top: 40px;
+                    margin-right: 10px;
+                    width: 20px;
+                    margin-left: 0px;
+                }
+            }
+        }
+    }
+</style>

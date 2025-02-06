@@ -1,0 +1,301 @@
+---
+import EndInfoImg from "./EndInfoImg.astro";
+import EndInfo from "./EndInfo.astro";
+---
+
+<div class="endSwiper">
+    <img src="/public/img/swiper_back.svg" alt="back" class="endSwiper__img" />
+    <div class="endSwiper__container swiper">
+        <div class="swiper-wrapper">
+            <div class="endSwiper__slide swiper-slide">
+                <!-- <div class="endSwiper__cont"> -->
+                <div class="endSwiper__col">
+                    <div class="endSwiper__title">
+                        <div class="endSwiper__number">1</div>
+                        <div class="endSwiper__text">Обработка данных</div>
+                    </div>
+                    <EndInfoImg />
+                </div>
+            </div>
+            <div class="endSwiper__slide swiper-slide">
+                <div class="endSwiper__col">
+                    <div class="endSwiper__title">
+                        <div class="endSwiper__number">2</div>
+                        <div class="endSwiper__text">Преобразование данных</div>
+                    </div>
+                    <EndInfo />
+                </div>
+            </div>
+            <div class="endSwiper__slide swiper-slide">
+                <div class="endSwiper__col">
+                    <div class="endSwiper__title">
+                        <div class="endSwiper__number">3</div>
+                        <div class="endSwiper__text">Обработка данных</div>
+                    </div>
+
+                    <EndInfoImg />
+                </div>
+            </div>
+            <div class="endSwiper__slide swiper-slide">
+                <div class="endSwiper__col">
+                    <div class="endSwiper__title">
+                        <div class="endSwiper__number">4</div>
+                        <div class="endSwiper__text">Преобразование данных</div>
+                    </div>
+
+                    <EndInfo />
+                </div>
+            </div>
+
+            <div class="endSwiper__slide swiper-slide">
+                <div class="endSwiper__col">
+                    <div class="endSwiper__title">
+                        <div class="endSwiper__number">5</div>
+                        <div class="endSwiper__text">Обработка данных</div>
+                    </div>
+
+                    <EndInfoImg />
+                </div>
+            </div>
+            <div class="endSwiper__slide swiper-slide">
+                <div class="endSwiper__col">
+                    <div class="endSwiper__title">
+                        <div class="endSwiper__number">6</div>
+                        <div class="endSwiper__text">Преобразование данных</div>
+                    </div>
+                    <EndInfo />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="endSwiper__prev"></div>
+    <div class="endSwiper__next"></div>
+    <div class="endSwiper__pagination"></div>
+</div>
+
+<style is:global lang="scss">
+    .endSwiper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__img {
+            z-index: 0;
+            width: 677px;
+            height: 655px;
+            position: absolute;
+        }
+        &__container {
+            display: flex;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+        }
+        // &__cont {
+        //     display: flex;
+        //     flex-direction: row;
+        //     gap: 240px;
+        //     width: 1200px;
+        // }
+
+        &__col {
+            display: flex;
+            flex-direction: column;
+            gap: 55px;
+        }
+        &__title {
+            place-items: center start;
+            width: 321px;
+            display: grid;
+        }
+
+        &__number {
+            grid-area: 1 / 1;
+            color: rgba(239, 239, 239, 1);
+            font-size: 96px;
+            font-weight: 900;
+            line-height: 115px;
+            text-align: left;
+        }
+
+        &__text {
+            font-size: 18px;
+            font-weight: 700;
+            grid-area: 1 / 1;
+        }
+        &__prev {
+            position: absolute;
+            top: 50%;
+            left: 0px;
+            z-index: 10;
+            cursor: pointer;
+        }
+        &__next {
+            position: absolute;
+            top: 50%;
+            right: 0px;
+            z-index: 10;
+            cursor: pointer;
+        }
+        &__pagination {
+            bottom: -30px !important;
+            color: rgba(224, 30, 46, 1);
+            text-align: center;
+            margin-top: 62px;
+
+            .swiper-pagination-bullet {
+                width: 16px;
+                height: 16px;
+                border: 2px solid #e01e2e;
+                border-radius: 50%;
+                background-color: transparent;
+                display: inline-block;
+                margin: 0 5px;
+                opacity: 0.5;
+                transition: opacity 0.3s ease;
+                position: relative;
+                cursor: pointer;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 12px;
+                    height: 12px;
+                    background-color: #e01e2e;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) scale(0);
+                    transition: transform 0.3s ease;
+
+                    opacity: 1;
+                }
+                &-active::before {
+                    transform: translate(-50%, -50%) scale(1);
+                }
+            }
+        }
+    }
+
+    @include desktop {
+        .endSwiper {
+            &__container {
+                width: 100%;
+            }
+
+            &__title {
+                width: 290px;
+            }
+        }
+    }
+
+    @include laptop {
+        .endSwiper {
+            &__container {
+                width: 100%;
+                overflow: hidden;
+            }
+
+            &__slide {
+                width: 100%;
+            }
+
+            &__col {
+                gap: 60px;
+            }
+
+            &__cont {
+                display: flex;
+                flex-direction: row;
+                width: 200%;
+            }
+            &__title {
+                width: 200px;
+                margin-top: 40px;
+            }
+
+            &__img {
+            }
+        }
+    }
+
+    @include tablet {
+        .endSwiper {
+            &__container {
+                width: 100%;
+            }
+
+            &__title {
+                width: 150px;
+            }
+            &__cont {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    @include phone {
+        .endSwiper {
+            &__container {
+                width: 100%;
+                height: 530px;
+            }
+
+            &__col {
+                gap: 30px;
+            }
+
+            &__title {
+                width: 100px;
+            }
+            &__cont {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+</style>
+
+<script>
+    import Swiper from "swiper";
+    import { Navigation, Pagination } from "swiper/modules";
+    import "swiper/css";
+    import "swiper/css/navigation";
+    import "swiper/css/pagination";
+
+    const swiperElement = document.querySelector(".endSwiper__container");
+    if (swiperElement instanceof HTMLElement) {
+        const swiper = new Swiper(swiperElement, {
+            modules: [Navigation, Pagination],
+            loop: true,
+            spaceBetween: 25,
+            autoplay: {
+                delay: 20000,
+            },
+            pagination: {
+                el: ".endSwiper__pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".endSwiper__next",
+                prevEl: ".endSwiper__prev",
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                },
+                576: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 1,
+                },
+                1200: {
+                    slidesPerView: 2,
+                },
+            },
+        });
+    }
+</script>

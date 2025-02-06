@@ -1,0 +1,75 @@
+---
+import MainCircle from "./MainCircle.astro";
+import MainBlackBlock from "./MainBlackBlock.astro";
+import MainMan from "./MainMan.astro";
+---
+
+<div class="mainColWithMan">
+    <div class="mainColWithMan__back">
+        <MainCircle />
+    </div>
+    <div class="mainColWithMan__mid">
+        <MainBlackBlock />
+    </div>
+    <div class="mainColWithMan__front">
+        <MainMan />
+    </div>
+</div>
+
+<style is:global lang="scss">
+    .mainColWithMan {
+        display: grid;
+        place-items: center;
+        justify-items: start;
+
+        &__back {
+            grid-area: 1 / 1;
+        }
+
+        &__mid {
+            grid-area: 1 / 1;
+        }
+
+        &__front {
+            grid-area: 1 / 1;
+            z-index: 1000;
+        }
+    }
+
+    @include desktop {
+        .mainColWithMan {
+            justify-items: center;
+            width: 90%;
+            height: 90%;
+
+            &__mid {
+                width: 660px;
+            }
+        }
+    }
+
+    @include laptop {
+        .mainColWithMan {
+        }
+    }
+
+    @include tablet {
+        .mainColWithMan {
+            &__mid {
+                width: 520px;
+            }
+        }
+    }
+
+    @include phone {
+        .mainColWithMan {
+            &__mid {
+                width: 280px;
+            }
+
+            &__front {
+                width: 280px;
+            }
+        }
+    }
+</style>

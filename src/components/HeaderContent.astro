@@ -1,0 +1,77 @@
+---
+import HeaderComponents from "./HeaderComponents.astro";
+
+const title = "AI-Driven Analytics Platform";
+---
+
+<div class="headerContent">
+    <div class="headerContent__text">
+        {title}
+    </div>
+    <div class="headerContent__items">
+        <!-- <HeaderForm/> -->
+        <HeaderComponents />
+    </div>
+</div>
+
+<style is:global lang="scss">
+    .headerContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__text {
+            font-size: 64px;
+            font-weight: bold;
+            color: white;
+        }
+
+        &__items {
+            margin-top: 80px;
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+        }
+    }
+
+    @include laptop {
+        .headerContent {
+            height: 100%;
+            max-height: 1200px;
+            &__text {
+                font-size: 50px;
+            }
+
+            &__items {
+                height: 100%;
+                min-height: 1100px;
+            }
+        }
+    }
+
+    @include tablet {
+        .headerContent {
+            height: 100%;
+            max-height: 1000px;
+            &__text {
+                font-size: 36px;
+                text-align: center;
+            }
+
+            &__items {
+                height: 100%;
+                min-height: 1100px;
+            }
+        }
+    }
+
+    @include phone {
+        .headerContent {
+            &__text {
+                font-size: 30px;
+                text-align: center;
+                width: 280px;
+            }
+        }
+    }
+</style>

@@ -1,0 +1,87 @@
+---
+import EndWSwipers from "./EndWSwipers.astro";
+import EndText from "./EndText.astro";
+---
+
+<div class="end">
+  <div class="end__container">
+    <div class="end__title">
+      <EndText />
+    </div>
+    <EndWSwipers />
+  </div>
+</div>
+
+<style is:global lang="scss">
+  .end {
+    display: flex;
+    width: 100%;
+    max-width: 1920px;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 245px;
+
+    &__container {
+      width: 100%;
+      max-width: 1300px;
+      display: flex;
+      flex-direction: column;
+      padding-left: 58px;
+      // align-items: center;
+    }
+
+    &__title {
+      // margin-left: 88px;
+      margin-top: 80px;
+      margin-bottom: 80px;
+    }
+  }
+
+  @include desktop {
+    .end {
+      width: 100%;
+      &__container {
+        width: 80%;
+        padding-left: 0px;
+      }
+    }
+  }
+
+  @include laptop {
+    .end {
+      width: 100%;
+      &__container {
+        width: 90%;
+        padding-left: 0px;
+      }
+    }
+  }
+
+  @include tablet {
+    .end {
+      width: 100%;
+      margin-bottom: 145px;
+
+      &__container {
+        width: 90%;
+        padding-left: 0px;
+      }
+    }
+  }
+
+  @include phone {
+    .end {
+      width: 100%;
+      margin-bottom: 45px;
+
+      &__container {
+        width: 90%;
+        padding-left: 0px;
+      }
+
+      &__title {
+        margin-bottom: 30px;
+      }
+    }
+  }
+</style>

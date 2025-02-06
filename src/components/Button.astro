@@ -1,0 +1,58 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"button"> {
+  size?: "normal" | "large" | "small";
+  width?: "320" | "390";
+  href?: string;
+}
+
+const {
+  size = "normal",
+  width,
+  href,
+  ...restProps
+} = Astro.props;
+
+const Element = href ? "a" : "button";
+
+let classList: string[] = ["button", "button--${size}"];
+
+if (width) classList.push("button--${width}");
+---
+
+<Element class:list={classList} {href} {...restProps}>
+  <slot />
+</Element>
+
+<style is:global lang="scss">
+  .button {
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    line-height: 24px;
+    width: 100%;
+    max-width: var(--_max-w);
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: background var(--transition);
+    background-color: #e01e2e;
+
+    &--normal {
+      font-size: 18px;
+      min-height: 60px;
+    }
+
+    $widths: 320, 390;
+    @each $width in $widths {
+      &--#{$width} {
+        --_max-w: #{$width}px;
+        height: 60px;
+      }
+    }
+  }
+
+</style>

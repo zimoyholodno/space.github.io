@@ -1,0 +1,66 @@
+---
+
+---
+
+<div class="mainText">
+  <div class="mainText__item">
+    <div class="mainText__line"></div>
+    <div class="mainText__title">Промо-давление увеличивается</div>
+  </div>
+  <div class="mainText__item">
+    <div class="mainText__line"></div>
+    <div class="mainText__title">
+      80% данных не используется производителями
+    </div>
+  </div>
+</div>
+
+<style is:global lang="scss">
+  .mainText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 351px;
+    &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__line {
+      background-color: #e01e2e;
+      width: 75px;
+      height: 8px;
+    }
+
+    &__title {
+      font-size: 32px;
+      font-weight: bold;
+      font-family: "PF Agora Sans Pro";
+    }
+  }
+  @include desktop {
+    .mainText {
+      gap: 200px;
+    }
+  }
+
+  @include laptop {
+    .mainText {
+      gap: 100px;
+    }
+  }
+
+  @include tablet {
+    .mainText {
+      width: 100%;
+      max-width: 1200px;
+    }
+  }
+
+  @include phone {
+    .mainText {
+      gap: 20px;
+    }
+  }
+</style>

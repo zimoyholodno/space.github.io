@@ -1,0 +1,193 @@
+---
+import HeaderText from "./HeaderText.astro";
+import Button from "./Button.astro";
+import HeaderContent from "./HeaderContent.astro";
+import Nav from "./Nav.astro";
+---
+
+<header class="header">
+    <div class="header__container">
+        <div class="header__top">
+            <HeaderText />
+            <Button class="button--320" size="normal"
+                >Запросить презентацию</Button
+            >
+        </div>
+        <div class="header__nav">
+            <Nav/>
+        </div>
+        <div class="header__image">
+            <img src="/public/img/header_logo.png" alt="лого или нет" />
+        </div>
+        <div class="header__content">
+            <HeaderContent />
+        </div>
+    </div>
+    <div class="header__vec">
+        <img src="/public/img/Vector.svg" alt="vector" />
+    </div>
+</header>
+
+<style is:global lang="scss">
+    .header {
+        width: 100%;
+        max-width: 1920px;
+        transition: box-shadow var(--transition);
+        background-image: url("/public/img/header_back.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        align-items: center;
+
+        @include section;
+
+        &__container {
+            width: 1200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            grid-area: center;
+        }
+
+        &__top {
+            margin-top: 30px;
+            justify-content: space-between;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        &__nav{
+            // visibility: hidden;
+            display: none;
+        }
+
+        &__image {
+            width: 452px;
+            height: 80px;
+            margin-top: 86px;
+        }
+
+        &__content {
+            margin-top: 80px;
+            margin-bottom: 40px;
+        }
+
+        &__vec {
+            width: 100%;
+            margin: 0;
+            display: block;
+            grid-column: 1 / -1;
+
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    @include desktop {
+        .header {
+            width: 100%;
+            &__container {
+                width: 100%;
+            }
+
+            &__top {
+                margin-top: 30px;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                gap: 50px;
+                align-items: center;
+            }
+        }
+    }
+
+    @include laptop {
+        .header {
+            width: 100%;
+            &__container {
+                width: 100%;
+                height: 100%;
+                min-height: 1500px;
+            }
+            // &__top{
+            //     visibility: hidden;
+            //     display: none;
+            // }
+
+            // &__nav{
+            //     // visibility: visible;
+            //     display: flex;
+            //     // overflow-y: auto;
+            // }
+
+            &__content {
+                height: 100%;
+                min-height: 1100px;
+            }
+            &__top {
+                margin-top: 30px;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                gap: 40px;
+            }
+        }
+    }
+
+    @include tablet {
+        .header {
+            width: 100%;
+            &__container {
+                width: 100%;
+                height: 100%;
+                min-height: 1200px;
+            }
+
+            &__content {
+                height: 100%;
+                min-height: 1200px;
+            }
+
+            &__top {
+                margin-top: 30px;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                gap: 30px;
+            }
+        }
+    }
+
+    @include phone {
+        .header {
+            &__container {
+                width: 100%;
+            }
+
+            &__top {
+                margin-top: 30px;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                gap: 20px;
+            }
+
+            button {
+                width: 200px;
+            }
+
+            &__image {
+                width: 250px;
+            }
+
+            &__content {
+                height: 100%;
+                min-height: 1320px;
+            }
+        }
+    }
+</style>
